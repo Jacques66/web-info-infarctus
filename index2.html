@@ -26,43 +26,43 @@
   html{background:#8A8F94}
   body{
     font-family:"IBM Plex Sans","Segoe UI",Arial,sans-serif;
-    font-size:8.6pt; line-height:1.32; color:var(--ink);
+    font-size:8.5pt; line-height:1.26; color:var(--ink);
     -webkit-print-color-adjust:exact; print-color-adjust:exact;
   }
 
   .sheet{
-    width:210mm; min-height:297mm; margin:14mm auto; padding:9mm 9mm 7mm;
+    width:210mm; min-height:297mm; margin:14mm auto; padding:8mm 9mm 6mm;
     background:var(--paper); box-shadow:0 2px 24px rgba(0,0,0,.35);
-    display:flex; flex-direction:column; gap:3.6mm;
+    display:flex; flex-direction:column; gap:2.6mm;
   }
 
   /* ---------- header ---------- */
-  .banner{display:flex; align-items:stretch; gap:5mm; border-bottom:2.4pt solid var(--ink); padding-bottom:3mm}
+  .banner{display:flex; align-items:stretch; gap:5mm; border-bottom:2.4pt solid var(--ink); padding-bottom:2.2mm}
   .banner .lede{flex:1; display:flex; flex-direction:column; justify-content:center}
   h1{
     font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
-    font-weight:700; font-size:29pt; line-height:.95; letter-spacing:-.01em;
+    font-weight:700; font-size:25pt; line-height:.95; letter-spacing:-.01em;
     text-transform:uppercase;
   }
-  h1 em{font-style:normal; display:block; font-size:15pt; font-weight:600; color:var(--mute); letter-spacing:.02em}
-  .lede p{margin-top:2mm; font-size:8.4pt; max-width:112mm; color:var(--ink)}
+  h1 em{font-style:normal; display:block; font-size:13pt; font-weight:600; color:var(--mute); letter-spacing:.02em}
+  .lede p{margin-top:1.6mm; font-size:8pt; max-width:112mm; color:var(--ink)}
   .lede strong{font-weight:600}
 
   .call{
-    border:2.4pt solid var(--ink); padding:2mm 4mm 1.5mm; text-align:center;
-    display:flex; flex-direction:column; justify-content:center; min-width:44mm;
+    border:2.4pt solid var(--ink); padding:1.4mm 4mm 1.2mm; text-align:center;
+    display:flex; flex-direction:column; justify-content:center; min-width:42mm;
   }
-  .call .lbl{font-family:"Barlow Condensed",Arial,sans-serif; font-weight:600; font-size:8.6pt; letter-spacing:.16em; text-transform:uppercase}
-  .call .num{font-family:"Barlow Condensed",Arial,sans-serif; font-weight:700; font-size:40pt; line-height:.82; letter-spacing:-.02em}
-  .call .sub{font-size:7pt; color:var(--mute); margin-top:1mm; line-height:1.25}
+  .call .lbl{font-family:"Barlow Condensed",Arial,sans-serif; font-weight:600; font-size:8pt; letter-spacing:.16em; text-transform:uppercase}
+  .call .num{font-family:"Barlow Condensed",Arial,sans-serif; font-weight:700; font-size:33pt; line-height:.82; letter-spacing:-.02em}
+  .call .sub{font-size:6.6pt; color:var(--mute); margin-top:.8mm; line-height:1.22}
 
   /* ---------- generic section chrome ---------- */
-  .band{display:grid; gap:4mm}
+  .band{display:grid; gap:3mm}
   .two{grid-template-columns:1fr 1fr}
-  .col{display:flex; flex-direction:column; gap:4mm}
+  .col{display:flex; flex-direction:column; gap:3mm}
 
-  section{border-top:1.6pt solid var(--c,var(--ink)); padding-top:1.8mm}
-  .head{display:flex; align-items:flex-start; gap:2mm; margin-bottom:1.6mm}
+  section{border-top:1.6pt solid var(--c,var(--ink)); padding-top:1.4mm; break-inside:avoid}
+  .head{display:flex; align-items:flex-start; gap:2mm; margin-bottom:1.2mm}
   .head svg{width:12px; height:12px; flex:none; margin-top:.6mm; stroke:var(--c,var(--ink)); fill:none; stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round}
   .head .txt{flex:1}
   .eyebrow{
@@ -71,28 +71,28 @@
   }
   h2{
     font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
-    font-weight:700; font-size:14.5pt; line-height:1; text-transform:uppercase; letter-spacing:.005em;
+    font-weight:700; font-size:13.5pt; line-height:1; text-transform:uppercase; letter-spacing:.005em;
   }
-  .note{font-size:7.4pt; color:var(--mute); line-height:1.3; margin-bottom:1.4mm}
+  .note{font-size:7.3pt; color:var(--mute); line-height:1.25; margin-bottom:1.1mm}
   .note b{color:var(--ink); font-weight:600}
 
   ul{list-style:none}
-  li{padding-left:4.2mm; position:relative; margin-bottom:.9mm}
+  li{padding-left:4.2mm; position:relative; margin-bottom:.6mm}
   li::before{content:"—"; position:absolute; left:0; color:var(--c,var(--rule)); font-weight:600}
   li b{font-weight:600}
 
   /* ---------- prepare ---------- */
   .prep{--c:var(--prep)}
-  .check li{padding-left:5.2mm; margin-bottom:1.1mm}
+  .check li{padding-left:5.2mm; margin-bottom:.8mm}
   .check li::before{
-    content:""; position:absolute; left:0; top:.7mm;
-    width:2.9mm; height:2.9mm; border:.9pt solid var(--ink); background:var(--paper);
+    content:""; position:absolute; left:0; top:.6mm;
+    width:2.8mm; height:2.8mm; border:.9pt solid var(--ink); background:var(--paper);
   }
   .fillbox{
-    margin-top:1.6mm; background:var(--prep-bg); border-left:2.2pt solid var(--prep);
-    padding:1.8mm 2.4mm; font-size:7.6pt;
+    margin-top:1.4mm; background:var(--prep-bg); border-left:2.2pt solid var(--prep);
+    padding:1.5mm 2.2mm; font-size:7.4pt;
   }
-  .fillbox .t{font-weight:600; margin-bottom:1.2mm; display:flex; align-items:center; gap:1.4mm}
+  .fillbox .t{font-weight:600; margin-bottom:1mm; display:flex; align-items:center; gap:1.4mm}
   .fillbox .t svg{width:10px;height:10px;stroke:var(--prep);fill:none;stroke-width:2;stroke-linecap:round}
   .fill{display:flex; gap:3mm; flex-wrap:wrap}
   .fill span{white-space:nowrap; color:var(--mute)}
@@ -102,43 +102,43 @@
   .warn{--c:var(--warn)}
   .symp{--c:var(--symp)}
   .callout{
-    margin-top:1.4mm; padding:1.6mm 2.2mm; font-size:7.6pt; line-height:1.3;
+    margin-top:1.2mm; padding:1.4mm 2mm; font-size:7.3pt; line-height:1.25;
     background:var(--symp-bg); border-left:2.2pt solid var(--symp); display:flex; gap:1.8mm;
   }
   .callout svg{width:11px;height:11px;flex:none;margin-top:.4mm;stroke:var(--symp);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
   .rule5{
-    background:var(--ink); color:var(--paper); padding:1.4mm 2.2mm; margin-bottom:1.6mm;
-    font-family:"Barlow Condensed",Arial,sans-serif; font-weight:600; font-size:9.6pt;
+    background:var(--ink); color:var(--paper); padding:1.1mm 2.2mm; margin-bottom:1.2mm;
+    font-family:"Barlow Condensed",Arial,sans-serif; font-weight:600; font-size:9.2pt;
     letter-spacing:.02em; text-transform:uppercase; text-align:center;
   }
 
   /* ---------- actions : signature ---------- */
-  .actions{--c:var(--act); border-top-width:2.4pt}
+  .actions{--c:var(--act); border-top-width:2.4pt; break-inside:avoid}
   .ladder{display:grid; grid-template-columns:repeat(4,1fr); gap:0; border:1pt solid var(--rule)}
-  .step{padding:2.2mm 2.6mm; border-right:1pt solid var(--rule); display:flex; flex-direction:column}
+  .step{padding:1.8mm 2.4mm; border-right:1pt solid var(--rule); display:flex; flex-direction:column}
   .step:last-child{border-right:0}
   .step .n{
-    width:6.4mm; height:6.4mm; border-radius:50%; background:var(--ink); color:var(--paper);
-    font-family:"Barlow Condensed",Arial,sans-serif; font-weight:700; font-size:12pt;
-    display:flex; align-items:center; justify-content:center; margin-bottom:1.4mm;
+    width:5.8mm; height:5.8mm; border-radius:50%; background:var(--ink); color:var(--paper);
+    font-family:"Barlow Condensed",Arial,sans-serif; font-weight:700; font-size:11pt;
+    display:flex; align-items:center; justify-content:center; margin-bottom:1.1mm;
   }
   .step h3{
-    font-family:"Barlow Condensed",Arial,sans-serif; font-weight:700; font-size:12.5pt;
-    text-transform:uppercase; line-height:1; margin-bottom:1.2mm;
+    font-family:"Barlow Condensed",Arial,sans-serif; font-weight:700; font-size:11.5pt;
+    text-transform:uppercase; line-height:1; margin-bottom:1mm;
   }
-  .step p{font-size:7.7pt; line-height:1.32}
-  .step p + p{margin-top:1.1mm; color:var(--mute)}
+  .step p{font-size:7.4pt; line-height:1.27}
+  .step p + p{margin-top:.9mm; color:var(--mute)}
   .step .say{font-style:italic; border-left:1.6pt solid var(--rule); padding-left:1.6mm; color:var(--ink)}
 
   /* ---------- never / arrest ---------- */
   .never{--c:var(--stop)}
-  .never li{padding-left:5mm; margin-bottom:1mm}
+  .never li{padding-left:5mm; margin-bottom:.7mm}
   .never li::before{
     content:"✕"; font-size:8pt; font-weight:700; color:var(--stop); top:-.2mm;
   }
   .arrest{--c:var(--ink)}
   .arrest ol{list-style:none; counter-reset:a}
-  .arrest li{counter-increment:a; padding-left:5mm; margin-bottom:1mm}
+  .arrest li{counter-increment:a; padding-left:5mm; margin-bottom:.7mm}
   .arrest li::before{
     content:counter(a); position:absolute; left:0; top:0;
     font-family:"Barlow Condensed",Arial,sans-serif; font-weight:700; font-size:9pt;
@@ -147,8 +147,9 @@
   }
 
   footer{
-    margin-top:auto; padding-top:2mm; border-top:.8pt solid var(--hair);
-    font-size:6.6pt; color:var(--mute); display:flex; justify-content:space-between; gap:4mm;
+    margin-top:auto; padding-top:1.4mm; border-top:.8pt solid var(--hair);
+    font-size:6.4pt; line-height:1.25; color:var(--mute);
+    display:flex; justify-content:space-between; gap:4mm; break-inside:avoid;
   }
 
   .print-btn{
@@ -162,7 +163,8 @@
   @page{size:A4 portrait; margin:0}
   @media print{
     html{background:#fff}
-    .sheet{width:auto; min-height:0; margin:0; padding:8mm 9mm; box-shadow:none}
+    .sheet{width:auto; min-height:0; margin:0; padding:7mm 9mm 5mm; box-shadow:none}
+    footer{margin-top:1.6mm}
     .print-btn{display:none}
   }
 </style>
@@ -176,7 +178,7 @@
   <header class="banner">
     <div class="lede">
       <h1>Infarctus<em>Quoi faire, seul, chez soi</em></h1>
-      <p><strong>Appeler d'abord. Tout le reste vient après.</strong> Le délai moyen entre les premiers symptômes et l'appel des secours est de deux à quatre heures. C'est ce délai qui coûte du muscle cardiaque, pas le manque de courage.</p>
+      <p><strong>Appeler d'abord. Tout le reste vient après.</strong> Entre les premiers symptômes et l'appel des secours, il s'écoule en moyenne deux à quatre heures. C'est ce délai qui coûte du muscle cardiaque.</p>
     </div>
     <div class="call">
       <span class="lbl">Appeler</span>
@@ -323,7 +325,7 @@
         <li><b>Attendre de voir si ça passe.</b> C'est l'erreur la plus fréquente et la plus coûteuse.</li>
         <li><b>Marcher, monter, porter</b> quoi que ce soit.</li>
         <li><b>Manger ou boire</b> — l'aspirine exceptée.</li>
-        <li><b>Prendre de l'ibuprofène</b> ou un autre anti-inflammatoire : ils gênent l'action de l'aspirine. Le paracétamol, lui, ne sert simplement à rien ici.</li>
+        <li><b>Prendre de l'ibuprofène</b> ou un autre anti-inflammatoire : ils gênent l'aspirine. Le paracétamol, lui, ne sert à rien ici.</li>
       </ul>
     </section>
 
