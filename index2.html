@@ -45,16 +45,23 @@
     text-transform:uppercase;
   }
   h1 em{font-style:normal; display:block; font-size:13pt; font-weight:600; color:var(--mute); letter-spacing:.02em}
-  .lede p{margin-top:1.6mm; font-size:8pt; max-width:112mm; color:var(--ink)}
+  .lede p{margin-top:1.6mm; font-size:8pt; max-width:104mm; color:var(--ink)}
   .lede strong{font-weight:600}
 
   .call{
-    border:2.4pt solid var(--ink); padding:1.4mm 4mm 1.2mm; text-align:center;
-    display:flex; flex-direction:column; justify-content:center; min-width:42mm;
+    border:2.4pt solid var(--ink); padding:1.4mm 3mm 1.2mm; text-align:center;
+    display:flex; flex-direction:column; justify-content:center; min-width:54mm;
   }
   .call .lbl{font-family:"Barlow Condensed",Arial,sans-serif; font-weight:600; font-size:8pt; letter-spacing:.16em; text-transform:uppercase}
-  .call .num{font-family:"Barlow Condensed",Arial,sans-serif; font-weight:700; font-size:33pt; line-height:.82; letter-spacing:-.02em}
-  .call .sub{font-size:6.6pt; color:var(--mute); margin-top:.8mm; line-height:1.22}
+  .nums{display:flex; align-items:stretch; margin-top:.4mm}
+  .nums > div{flex:1; padding:0 2mm}
+  .nums > div + div{border-left:1pt solid var(--rule)}
+  .call .num{
+    font-family:"Barlow Condensed",Arial,sans-serif; font-weight:700; font-size:31pt;
+    line-height:.86; letter-spacing:-.02em; display:block;
+  }
+  .call .where{font-size:6.4pt; color:var(--mute); line-height:1.15; display:block; margin-top:.4mm}
+  .call .sub{font-size:6.6pt; color:var(--mute); margin-top:1mm; line-height:1.22; border-top:.8pt solid var(--hair); padding-top:.8mm}
 
   /* ---------- generic section chrome ---------- */
   .band{display:grid; gap:3mm}
@@ -182,8 +189,17 @@
     </div>
     <div class="call">
       <span class="lbl">Appeler</span>
-      <span class="num">112</span>
-      <span class="sub">Partout en Europe · 15 en France<br>Ne pas raccrocher</span>
+      <div class="nums">
+        <div>
+          <span class="num">112</span>
+          <span class="where">Belgique · Europe</span>
+        </div>
+        <div>
+          <span class="num">15</span>
+          <span class="where">France · SAMU</span>
+        </div>
+      </div>
+      <span class="sub">Ne pas raccrocher</span>
     </div>
   </header>
 
@@ -340,7 +356,7 @@
       </div>
       <p class="note">La plupart des morts avant l'hôpital viennent d'un arrêt cardiaque, pas d'une méconnaissance des symptômes. <b>Là, il faut un témoin</b> — et ce témoin, ce sera peut-être vous.</p>
       <ol>
-        <li><b>Appeler le 112</b>, haut-parleur activé, téléphone posé au sol.</li>
+        <li><b>Appeler le 112 ou le 15</b>, haut-parleur activé, téléphone posé au sol.</li>
         <li><b>Allonger sur le dos, sur un sol dur.</b> Ici, oui, à plat — la règle du demi-assis ne vaut que pour une personne consciente.</li>
         <li><b>Comprimer fort</b> le milieu de la poitrine, 100 à 120 fois par minute, sans s'interrompre.</li>
         <li><b>Faire chercher un défibrillateur</b> par quelqu'un d'autre. Le brancher, suivre la voix de l'appareil.</li>
