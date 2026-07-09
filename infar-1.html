@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fiche réflexe — Suspicion d'infarctus quand on est seul</title>
+<style>
+  @page { size: A4 portrait; margin: 8mm; }
+  * { box-sizing: border-box; }
+  :root {
+    --ink: #111827;
+    --muted: #374151;
+    --line: #1f2937;
+    --prep: #2563eb;
+    --before: #d97706;
+    --symptoms: #dc2626;
+    --avoid: #6b7280;
+    --actions: #b91c1c;
+    --aspirin: #047857;
+    --soft-prep: #eff6ff;
+    --soft-before: #fff7ed;
+    --soft-symptoms: #fef2f2;
+    --soft-avoid: #f3f4f6;
+    --soft-actions: #fff1f2;
+    --soft-aspirin: #ecfdf5;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink);
+    background: #fff;
+    line-height: 1.17;
+    font-size: 10.2px;
+  }
+  .page {
+    width: 100%;
+    max-width: 194mm;
+    margin: 0 auto;
+  }
+  header {
+    border: 2.4px solid var(--actions);
+    border-bottom: 5px solid var(--actions);
+    padding: 6px 8px;
+    margin-bottom: 6px;
+    display: grid;
+    grid-template-columns: 1.3fr .7fr;
+    gap: 8px;
+    align-items: center;
+    background: linear-gradient(90deg, #fff5f5, #ffffff 62%);
+  }
+  h1 {
+    margin: 0;
+    font-size: 17.5px;
+    line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: .2px;
+    color: var(--actions);
+  }
+  .alert {
+    font-weight: 700;
+    font-size: 11px;
+    margin-top: 4px;
+    color: var(--ink);
+  }
+  .callbox {
+    border: 2px solid var(--actions);
+    border-radius: 6px;
+    padding: 5px 6px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 12px;
+    background: #fff;
+  }
+  .numbers {
+    font-size: 28px;
+    line-height: 1;
+    margin: 2px 0;
+    color: var(--actions);
+    letter-spacing: .5px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  section {
+    border: 1.6px solid var(--line);
+    border-left-width: 6px;
+    padding: 5px 7px 6px;
+    min-height: 0;
+    background: #fff;
+    break-inside: avoid;
+  }
+  section.prep { border-left-color: var(--prep); background: var(--soft-prep); }
+  section.before { border-left-color: var(--before); background: var(--soft-before); }
+  section.symptoms { border-left-color: var(--symptoms); background: var(--soft-symptoms); }
+  section.avoidbox { border-left-color: var(--avoid); background: var(--soft-avoid); }
+  section.actions { border-left-color: var(--actions); background: var(--soft-actions); }
+  .aspirin-panel { border-left: 5px solid var(--aspirin); background: var(--soft-aspirin); padding-left: 6px; }
+  h2 {
+    margin: 0 0 4px;
+    padding-bottom: 2px;
+    border-bottom: 1.3px solid currentColor;
+    font-size: 12.8px;
+    text-transform: uppercase;
+    letter-spacing: .1px;
+  }
+  .prep h2 { color: var(--prep); }
+  .before h2 { color: var(--before); }
+  .symptoms h2 { color: var(--symptoms); }
+  .avoidbox h2 { color: var(--avoid); }
+  .actions h2 { color: var(--actions); }
+  .aspirin-panel h2 { color: var(--aspirin); }
+  h3 {
+    margin: 5px 0 2px;
+    font-size: 10.8px;
+  }
+  ul, ol { margin: 3px 0 0 16px; padding: 0; }
+  li { margin: 1.55px 0; }
+  .danger { font-weight: 700; color: var(--actions); }
+  .mini { font-size: 9px; color: var(--muted); }
+  .tag {
+    display: inline-block;
+    border: 1.5px solid currentColor;
+    border-radius: 3px;
+    padding: 1px 4px;
+    margin-right: 3px;
+    font-weight: 700;
+    font-size: 9px;
+    color: var(--before);
+    background: #fff;
+  }
+  .actions {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.12fr .88fr;
+    gap: 7px;
+    border-width: 2px;
+    border-left-width: 6px;
+  }
+  .steps li { margin: 2.7px 0; }
+  .phrase {
+    border: 2px dashed var(--actions);
+    border-radius: 4px;
+    padding: 4px 5px;
+    margin: 4px 0;
+    font-weight: 700;
+    background: #fff;
+  }
+  .avoid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px 7px;
+    margin-top: 3px;
+  }
+  .avoid div::before { content: "✗ "; font-weight: 700; color: var(--actions); }
+  .ok div::before { content: "✓ "; font-weight: 700; color: var(--aspirin); }
+  footer {
+    margin-top: 5px;
+    font-size: 8.2px;
+    color: var(--muted);
+    border-top: 1px solid #999;
+    padding-top: 3px;
+  }
+  @media print {
+    a { color: inherit; text-decoration: none; }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    /* Lisible en noir et blanc : chaque rubrique a un numéro, un titre, une bordure épaisse et un pictogramme textuel. */
+    section { box-shadow: inset 0 0 0 1px rgba(0,0,0,.18); }
+    .prep, .before, .symptoms, .avoidbox, .actions, .aspirin-panel {
+      background-image: linear-gradient(90deg, rgba(0,0,0,.035), rgba(255,255,255,0));
+    }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div>
+      <h1>Suspicion d'infarctus seul chez soi : fiche réflexe</h1>
+      <div class="alert">En cas de doute, agir comme une urgence. Ne pas attendre de “voir si ça passe”.</div>
+    </div>
+    <div class="callbox">
+      Urgence Europe / France<br>
+      <div class="numbers">112 / 15</div>
+      Dire : “Je crois faire un infarctus, je suis seul(e).”
+    </div>
+  </header>
+
+  <div class="grid">
+    <section class="prep">
+      <h2>1. Se préparer</h2>
+      <ul>
+        <li><span class="danger">Téléphone toujours accessible</span> : idéalement sur soi ou dans la pièce où l’on est le plus souvent, chargé, avec raccourci urgence.</li>
+        <li>Afficher près de l’entrée : adresse complète, étage, digicode, personne à prévenir, traitements, allergies.</li>
+        <li>Prévoir l’accès des secours : double de clé, voisin de confiance, consigne pour déverrouiller la porte si malaise.</li>
+        <li>Demander au médecin : <span class="danger">puis-je prendre de l’aspirine 300 mg en cas de suspicion d’infarctus ?</span> Noter clairement sa réponse.</li>
+        <li>Conserver les médicaments d’urgence au même endroit, visibles, non périmés.</li>
+        <li><span class="danger">Vérifier régulièrement les dates d’expiration</span> : agenda tous les 3 à 6 mois, renouveler avant péremption.</li>
+        <li>Informer conjoint, famille, voisin : où sont les infos médicales et quoi faire.</li>
+      </ul>
+    </section>
+
+    <section class="before">
+      <h2>2. Signes précurseurs — jours/heures avant</h2>
+      <p class="mini"><span class="tag">Important</span> surtout si c’est nouveau, inhabituel, plus fort, répété ou associé à des facteurs de risque.</p>
+      <ul>
+        <li>Fatigue brutale, profonde, disproportionnée.</li>
+        <li>Gêne, pression ou poids dans la poitrine à l’effort : escaliers, marche rapide, courses.</li>
+        <li>Essoufflement inhabituel pour des activités normalement faciles.</li>
+        <li>Insomnie inhabituelle, agitation ou anxiété sans cause claire.</li>
+        <li>Palpitations, battements irréguliers, “ratés”, accélérations sans raison.</li>
+      </ul>
+      <p class="danger">Action avant l’urgence : appeler un médecin rapidement, ou le 15/112 si les signes sont intenses, prolongés ou inquiétants. Demander un avis médical et, si nécessaire, ECG.</p>
+    </section>
+
+    <section class="symptoms">
+      <h2>3. Symptômes à reconnaître</h2>
+      <ul>
+        <li>Pression, étau, poids ou douleur au centre de la poitrine, souvent > 5 min.</li>
+        <li>Douleur qui irradie : bras gauche ou droit, mâchoire, cou, dos, épaules.</li>
+        <li>Sueur froide, pâleur, malaise, vertiges.</li>
+        <li>Nausées, vomissements, douleur “type indigestion” ou gêne à l’estomac.</li>
+        <li>Essoufflement, oppression, difficulté à respirer.</li>
+        <li>Angoisse intense, impression que “quelque chose ne va pas”.</li>
+      </ul>
+      <p class="mini"><span class="danger">Chez les femmes, les personnes âgées et les diabétiques</span>, les signes peuvent être moins typiques : fatigue, nausée, essoufflement, malaise, douleur de mâchoire/dos.</p>
+    </section>
+
+    <section class="avoidbox">
+      <h2>4. À ne pas faire</h2>
+      <div class="avoid">
+        <div>Ne pas conduire jusqu’à l’hôpital.</div>
+        <div>Ne pas attendre que ça passe.</div>
+        <div>Ne pas faire d’effort physique.</div>
+        <div>Ne pas manger ni boire, sauf consigne médicale.</div>
+        <div>Ne pas multiplier les appels aux proches avant les secours.</div>
+        <div>Ne pas compter sur la “cough CPR” / toux forcée.</div>
+      </div>
+      <h3>À retenir</h3>
+      <p class="mini">Les techniques de respiration ou de calme ne remplacent jamais l’appel aux secours. Elles servent seulement à tenir en attendant l’aide.</p>
+    </section>
+
+    <section class="actions">
+      <div>
+        <h2>Actions immédiates — les 60 premières secondes</h2>
+        <ol class="steps">
+          <li><span class="danger">Appeler immédiatement le 15 ou le 112.</span> Mettre le haut-parleur si possible.</li>
+          <li>Dire clairement :</li>
+        </ol>
+        <div class="phrase">“Je crois que je fais un infarctus. Je suis seul(e). Mon adresse est : ________. Étage/code : ________.”</div>
+        <ol class="steps" start="3">
+          <li><span class="danger">Ne pas raccrocher.</span> Suivre les consignes du régulateur.</li>
+          <li><span class="danger">Déverrouiller / ouvrir la porte</span> si cela peut être fait sans effort important.</li>
+          <li>S’asseoir : dos appuyé, genoux pliés, position semi-assise confortable. Rester immobile.</li>
+          <li>Respirer lentement : inspirer 4 s, pause 7 s si supportable, expirer 8 s. Ne pas forcer.</li>
+        </ol>
+      </div>
+      <div class="aspirin-panel">
+        <h2>Aspirine : seulement si sûr</h2>
+        <p><span class="danger">Après appel au 15/112</span>, et seulement si disponible et sans contre-indication connue.</p>
+        <div class="ok">
+          <div>Dose souvent indiquée : <span class="danger">300 mg</span>.</div>
+          <div>À mâcher puis avaler, sauf consigne contraire.</div>
+        </div>
+        <h3>Ne pas prendre / demander au 15 avant si :</h3>
+        <ul>
+          <li>allergie à l’aspirine ou aux anti-inflammatoires ;</li>
+          <li>saignement digestif, ulcère actif, trouble hémorragique ;</li>
+          <li>traitement anticoagulant ou doute sur vos médicaments ;</li>
+          <li>consigne contraire de votre médecin.</li>
+        </ul>
+        <p class="danger">Aspirine ≠ remplacement des secours.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    Mémo personnel, ne remplace pas un avis médical. Sources consultées : Ameli, “Reconnaître un infarctus et agir au plus vite”, 05/06/2026 ; NHS, “Heart attack”, consulté 2026 ; American Heart Association, “Cough CPR: Not endorsed”, 30/12/2025 ; VIDAL, “Infarctus du myocarde”, 04/03/2024. En cas de symptômes : appelez le 15 ou le 112.
+  </footer>
+</div>
+</body>
+</html>
